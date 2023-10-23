@@ -6,9 +6,10 @@
         <table class="content-nav">
             <thead>
               <tr>
-                <td>#player</td>
-                <td>club</td>
-                <td>transfer value, <br> mill. euro</td>
+                  <td>#</td>
+                  <td>Player</td>
+                  <td>Club</td>
+                  <td>Cost</td>
               </tr>
             </thead>
           </table>
@@ -16,11 +17,13 @@
     <div class="content">
         <table class="playerss">
           {% for player in players %}
-            <td>{{forloop.counter}} {{player.name}}</td>
+          <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{player.name}}</td>
             <td>{{player.club}}</td>
             <td>{{player.cost}}</td>
+           </tr>
           {% endfor %}
-          </tr>
           
           </table>
         

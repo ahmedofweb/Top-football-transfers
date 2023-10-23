@@ -9,8 +9,8 @@
         <div class="clubs">
           {% for club in clubs %}
           <div class="club">
-            <a href="#">
-              <img src="{{club.logo.url}}" alt="" />
+            <a href="/players/{{club.id}}/">
+                <img src="{{club.logo.url}}" alt="Bu yerda rasm">
               {{club.name}}
             </a>
           </div>

@@ -28,9 +28,13 @@ urlpatterns = [
     path('clubs/', clubs),
     path('players/', players),
     path('tryouts/', tryouts),
-    path('latest_transfers/', last_transfers),
-    path('u_20players/', u_20players),
+    path('latest_transfers/', latest_transfers),
+    path('u_20players/', u20_players),
     path('stats/', stats),
-    path('about/', about)
-
+    path('about/', about),
+    path('transfer_records/', transfer_records),
+    path('transfer_archive/', transfer_archive),
+    path('transfers/<str:season>/', season_transfers),
+    path('players/<int:pk>/', club_players),
+    path('clubs/<str:name>/', country_clubs)
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

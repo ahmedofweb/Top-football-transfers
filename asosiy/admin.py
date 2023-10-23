@@ -8,8 +8,13 @@ class ClubAdmin(admin.ModelAdmin):
 
 @admin.register(Player)
 class PlayerAdmin(admin.ModelAdmin):
-    list_display = ['name', 'position', 'club']
+    list_display = ['name', 'position', 'club', 'cost', 'country', 'dob']
+    list_editable = ['cost']
 
 @admin.register(Transfer)
 class TransferAdmin(admin.ModelAdmin):
-    list_display = ['player', 'after_club', 'before_club']
+    list_display = ['player', 'before_club', 'after_club', 'selling_cost']
+    list_editable = ['selling_cost']
+@admin.register(PresentSeason)
+class PresentSeasonAdmin(admin.ModelAdmin):
+    list_display = ['p_season']
